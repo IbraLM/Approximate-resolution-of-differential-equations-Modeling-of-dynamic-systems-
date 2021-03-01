@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{layout}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[table]{xcolor}
+\usepackage[top=1.5cm,bottom=1.5cm,left=0.45cm,right=0.45cm]{geometry}
+\usepackage{amsthm}
+
+
+
+%%%%%%%%%%%%%%%% Lengths %%%%%%%%%%%%%%%%
+\setlength{\textwidth}{19cm}
+\setlength{\evensidemargin}{-0,5cm}
+\setlength{\oddsidemargin}{-0,5cm}
+
+%%%%%%%%%%%%%%%% Variables %%%%%%%%%%%%%%%%
+\def\projet{6}
+\def\titre{Résolution approchée d'équations différentielles / Modélisation de systèmes dynamiques }
+\def\groupe{2}
+\def\equipe{8640}
+\def\responsible{Benjamin UPTON}
+\def\secretary{Anas TALBI}
+\def\others{Aurélien MOINEL / Quentin LAMOUR / \\ \hspace{25.00mm} Ibrahim LMOURID}
+
+\makeatletter
+\newcommand\authorsection[2]{%
+ \@ifstar\section\section*[#1]{#1 \hfill {\normalsize#2}}
+}
+\makeatother
+
+\begin{document}
+
+%%%%%%%%%%%%%%%% Header %%%%%%%%%%%%%%%%
+\noindent\begin{minipage}{0.98\textwidth}
+  \vskip 0mm
+  \noindent
+  { \begin{tabular}{p{7.5cm}}
+      {\bfseries \sffamily
+        Projet \projet} \\ 
+      {\itshape \titre}
+    \end{tabular}}
+  \hfill 
+  \fbox{\begin{tabular}{l}
+      {~\hfill \bfseries \sffamily Groupe \groupe\ - Equipe \equipe
+        \hfill~} \\[2mm] 
+      Manager : \responsible \\
+      Secrétaire : \secretary \\
+      Programmeurs : \others
+    \end{tabular}}
+  \vskip 4mm ~
+
+  ~~~\parbox{0.95\textwidth}{\small \textit{\textbf{Résumé}~: } \sffamily \\ Le but de ce projet est de s'intéresser aux méthodes de résolution d'équations différentielles ordinaires. Dans une première partie, nous présentons les méthodes de résolution à un pas afin de les utiliser sur des équations différentielles ordinaires en dimension finie. Ensuite, nous montrons deux applications de ces méthodes, à savoir le modèle de biologie des populations dit de Lokta-Volterra, et le pendule à $N$ maillons.
+  }
+  
+\end{minipage}
+
+%%%%%%%%%%%%%%%% Main part %%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\lhead{Algorithme Numérique}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\vskip 3mm ~
+
+\input{Methode_resolution}
+
+\input{Proie_predateur}
+
+\input{Double_pendule}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+

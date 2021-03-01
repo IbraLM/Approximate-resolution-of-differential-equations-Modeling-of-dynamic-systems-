@@ -1,0 +1,17 @@
+# .gitignore -- List of files ignored by git
+*.[oa]
+*~
+*.aux
+*.log
+*.out
+*.toc
+*.bak
+*.pdf
+
+# emacs temp files
+\#*
+.\#*
+
+# python temp files
+__pycache__/
+*.py~
